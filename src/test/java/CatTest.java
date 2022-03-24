@@ -29,7 +29,7 @@ public class CatTest {
         List<String> list = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(feline.eatMeat()).thenReturn(list);
         List<String> actualCatFood = cat.getFood();
-        List<String> expectedCatFood = List.of("Животные", "Птицы", "Рыба");
+        List<String> expectedCatFood = list;
         assertEquals("Некорректный список еды для котика", expectedCatFood, actualCatFood);
     }
 }
